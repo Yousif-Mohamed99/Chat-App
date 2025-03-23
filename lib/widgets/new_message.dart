@@ -49,27 +49,36 @@ class _NewMessageState extends State<NewMessage> {
     });
   }
 
+  
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 15, right: 1, bottom: 25),
-      child: Row(
-        children: [
-          Expanded(
-            child: TextField(
-              controller: _messageController,
-              decoration: InputDecoration(label: Text('Send a message...')),
-              autocorrect: true,
-              enableSuggestions: true,
-              textCapitalization: TextCapitalization.sentences,
+    return SingleChildScrollView(
+      reverse: true,
+      child: Padding(
+        padding: EdgeInsets.only(
+          left: 15,
+          right: 1,
+          bottom: MediaQuery.of(context).viewInsets.bottom + 15,
+        ),
+        child: Row(
+          children: [
+            Expanded(
+              child: TextField(
+                controller: _messageController,
+                decoration: InputDecoration(label: Text('Send a message...')),
+                autocorrect: true,
+                enableSuggestions: true,
+                textCapitalization: TextCapitalization.sentences,
+              ),
             ),
-          ),
-          IconButton(
-            onPressed: _submitMessage,
-            icon: Icon(Icons.send),
-            color: Theme.of(context).colorScheme.primary,
-          ),
-        ],
+
+            IconButton(
+              onPressed: _submitMessage,
+              icon: Icon(Icons.send),
+              color: Theme.of(context).colorScheme.primary,
+            ),
+          ],
+        ),
       ),
     );
   }
