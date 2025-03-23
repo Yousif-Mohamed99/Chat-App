@@ -15,5 +15,5 @@ Chat App is a cross-platform mobile application developed using Flutter, Dart, a
   - **Notifications**: Firebase Messaging
 
 ## Deliverables
-- APK Demo: https://drive.google.com/drive/folders/1vmY4PuT7tL5MbjXM-besbI3ZgFlEQWk3?usp=share_link
+- APK Demo: https://drive.google.com/drive/folders/1vmY4PuT7tL5MbjXM-besbI3ZgFlEQWk3?usp=share_link (Installable on Android devices)
 - Source code fully documented in this repository
